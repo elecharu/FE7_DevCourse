@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>문제 7</title>
+</head>
+<body>
+  <form id="myForm">
+    <input type="text" name="name" placeholder="이름 입력" />
+    <button type="submit">제출</button>
+ </form>
+
+  <script>
+      const submitBtn = document.querySelector('button')
+
+      submitBtn.addEventListener('click', function (e) {
+        e.preventDefault(); // 리로딩 방지? (이벤트 버블링 응용)
+        const text = document.querySelector('input[name="name"]').value;
+        window.alert(`Hello, ${text}`)
+      })
+
+  </script>
+</body>
+</html>

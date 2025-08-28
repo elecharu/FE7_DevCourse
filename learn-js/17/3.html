@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>이벤트 버블링 & 캡처링 예제</title>
+	<style>
+		body{
+			min-height: 100vh;
+		}
+		#draggable {
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			cursor: move;
+			position: absolute;
+			left: 8px;
+			top: 8px
+		}
+	</style>
+</head>
+<body>
+	<div id= 'draggable' draggable="true">드래그 해보세요!</div>
+	<div id = 'status'"></div>
+
+	<script>
+		const draggable = document.getElementById('draggable')
+		const status = document.getElementById('status')
+
+		draggable.addEventListener('dragstart', function (e) {
+			status.textContent = '드래그가 시작되었습니다.'
+			e.dataTransfer.setData('text/plain'," 이것은 드래그 중입니다.")
+		})
+
+		document.body.addEventListener('dragover', function (e){
+			e.preventDefault();
+		})
+
+		document.body.addEventListener('drop', function (e){
+			e.preventDefault();
+			console.log(e)
+
+			const x = e.clientX
+			const y = e.clientY
+
+			console.log(draggable)
+			draggable.style.left = x - draggable.offsetWidth / 2 + 'px'
+			draggable.style.top = y - draggable.offsetHeight / 2+ 'px';
+		})
+
+		//   draggable.addEventListener('dragend', function (e) {
+		//     status.textContent = '드래그가 종료되었습니다.'
+		//   })
+	</script>
+</body><!--  -->
+</html>

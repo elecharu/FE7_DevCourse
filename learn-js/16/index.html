@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Document</title>
+            <script defer src="./03.js"></script>
+            <style>
+                .red {
+                    color: red;
+                }
+            </style>
+        </head>
+    <body>
+        <h1 id = 'title'> Hello</h1>
+        <h1 class = 'red'> World!</h1>
+        <h2 class = 'red'> World2!</h2>
+        <p>Lorem, ipsum</p>
+
+        <form name = 'login-form'>
+            <input type = 'text' name = 'email' value = 'test'>
+            <input type = 'text' name = 'pw' value = 'test'>
+        </form>
+        <form name = 'signup-form'>
+            <input type = 'text' name = 'pw' value = '1234'>
+        </form>
+        
+        <script>
+            document.getElementById('title')
+            const el = document.querySelectorAll("h1")
+            console.log(el)
+
+            const form = document.forms['login-form'];
+            console.log(form.email.value)
+            console.log(form.pw.value)
+
+            console.log(document.querySelector('input[name="email"]').value)
+            console.log(document.querySelector('input[name="pw"]').value) // 해당 하는 첫번째 요소만 바로 반환
+
+            console.log(document.querySelector('form[name="signup-form"] input[name="pw"]').value); // 밑에 따로 지정하는 방법
+
+            const pwInputs = document.querySelectorAll('input[name="pw"]'); // 해당 하는 모든 요소의 값을 반환 받아서 객체로 반환
+            console.log(pwInputs[0].value); // "test"
+            console.log(pwInputs[1].value); // "1234"
+        </script>
+    </body>
+</html>

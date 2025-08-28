@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Document</title>
+            <script defer src="./01.js"></script>
+        </head>
+    <body>
+        <H1>이벤트</H1>
+        <button>클릭</button>
+        <button id = cancel>이벤트 해제</button>
+
+        <button id = printBtn>출력 버튼</button>
+        <button onclick=print()>이벤트 해제</button>
+        <script>
+            // 이벤트 타겟
+            const target = document.querySelector('button')
+
+            // 이벤트 타입 (click)
+            target.addEventListener('click',  function () {
+                console.log('클릭됨')
+            })
+            const mouseEventHandler = function () {
+                console.log('mouseenter')
+                this.style.color = 'red'
+            }
+            const mouseLeaveHandler = function () {
+                console.log("mouseleave")
+                this.style.color = 'blue'
+            }
+
+            // 이벤트 타입 (click)
+            target.addEventListener('mouseenter', mouseEventHandler)
+            target.addEventListener('mouseleave', mouseLeaveHandler)
+
+            const cancelBtn = document.querySelector('#cancel');
+
+            cancelBtn.addEventListener('click', function () {
+                target.removeEventListener('mouseenter', mouseEventHandler)
+                target.removeEventListener('mouseleave', mouseLeaveHandler)
+            })
+
+            const printBtn = document.querySelector('#printBtn');
+            printBtn.addEventListener('click', function () {
+                console.log("HELLO")
+            })
+
+            function print() {
+                console.log("WORLD!")
+            }
+        </script>
+    </body>
+</html>

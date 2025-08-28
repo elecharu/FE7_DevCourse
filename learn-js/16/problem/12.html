@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>문제 12</title>
+  </head>
+  <body>
+    <ul>
+      <li>기존 항목 1</li>
+      <li>기존 항목 2</li>
+    </ul>
+    <script>
+        const el = document.createElement('li');
+        el.innerText = '첫 번째 항목';
+
+        const parentEl = document.querySelector('ul')
+        // const firstChild = document.querySelector('li:nth-child(1)')
+        const firstChild = parentEl.firstElementChild;
+        parentEl.insertBefore(el, firstChild)
+    </script>
+  </body>
+</html>

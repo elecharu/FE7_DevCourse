@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>문제 6</title>
+</head>
+<body>
+  <button id="openModalButton">모달 열기</button>
+  <div id="modal" style="display:none;">
+      <div>모달 내용</div>
+      <button id="closeModalButton">닫기</button>
+  </div>
+
+  <script>
+    const openBtl = document.querySelector('#openModalButton')
+    const closeBtl = document.querySelector('#closeModalButton')
+
+    const div = document.querySelector('#modal')
+
+    openBtl.addEventListener('click', function(e){
+      div.setAttribute('style', 'display:block')
+    })
+    
+    closeBtl.addEventListener('click', function(e){
+      div.setAttribute('style', 'display:none')
+    })
+
+  </script>
+</body>
+</html>

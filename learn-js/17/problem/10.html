@@ -1,0 +1,41 @@
+<!-- <div class="card">
+  <h3>카드 제목</h3>
+  <p>카드 내용</p>
+</div> -->
+
+<!-- 템플릿 리터럴을 사용하여 다음과 같은 HTML 구조를 추가하세요. -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <div>
+        <button class="tab" data-target="tab1">탭 1</button>
+        <button class="tab" data-target="tab2">탭 2</button>
+    </div>
+    <div id="tab1" class="tab-content" style="display:none;">탭 1 내용</div>
+    <div id="tab2" class="tab-content" style="display:none;">탭 2 내용</div>
+
+    <script>
+        const tabBtn1 = document.querySelector('button[data-target="tab1"]')
+        const tabBtn2 = document.querySelector('button[data-target="tab2"]')
+
+        const tab1 = document.getElementById('tab1')
+        const tab2 = document.getElementById('tab2')
+
+        tabBtn1.addEventListener('click', function() {
+            tab1.setAttribute('style', 'display:block')
+            tab2.setAttribute('style', 'display:none')
+        })
+
+        tabBtn2.addEventListener('click', function() {
+            tab1.setAttribute('style', 'display:none')
+            tab2.setAttribute('style', 'display:block')
+        })
+
+
+    </script>
+</body>
+</html>

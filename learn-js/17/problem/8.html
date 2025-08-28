@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>문제 8</title>
+</head>
+<body>
+  <input type="password" id="passwordInput">
+  <input type="checkbox" id="showPassword"> 비밀번호 보기
+  <script>
+    // 여기에 코드를 작성하세요
+
+    const checkBox = document.querySelector('#showPassword');
+    checkBox.addEventListener('click', function (e) {
+      if(document.getElementById('passwordInput').getAttribute('type') === 'password')
+        document.getElementById('passwordInput').setAttribute('type', null)
+      else document.getElementById('passwordInput').setAttribute('type', 'password')
+    })
+  </script>
+</body>
+</html>
