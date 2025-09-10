@@ -14,6 +14,11 @@
         name: string;
         age: number;
     }
+
+    const person: Person = {
+        name: 'kim',
+        age: 20
+    }
 }
 // ```
 
@@ -35,7 +40,7 @@
     interface Car {
         brand: string;
         model: string;
-        start(): void;
+        start(this: Car): void;
     }
 
     function vehicle(car: Car) {
@@ -45,12 +50,12 @@
     const myCar: Car = {
         brand: 'kia',
         model: 'k5',
-        start() {
+        start(this: Car) {
             console.log('부릉부릉');
         }
     };
 
-    vehicle(myCar);
+    myCar.start();
 }
 // ```
 
@@ -233,6 +238,9 @@
         zipcode: number;
     }
 
+    // 이런식으로 묶어줘도 된다!
+    // type Contact = Person & Address
+
     interface Contact extends Person, Address {
         speak(): void;
     }
@@ -268,6 +276,11 @@
 {
     interface Dictionary {
         [key: string]: string;
+    }
+
+    const dictionary: Dictionary = {
+        hello: 'a',
+        myname: 'han'
     }
 }
 // ```
