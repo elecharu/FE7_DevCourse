@@ -29,7 +29,7 @@ export default function App() {
       </div>
 
       <div className="flex gap-4 ml-4 mb-4">
-        <Input style="input">Enter Todo List</Input>
+        <Input type="text">Enter Todo List</Input>
       </div>
 
       <div className="flex gap-4 ml-4 mb-4">

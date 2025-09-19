@@ -5,17 +5,30 @@ interface inputProps {
   children: string;
 }
 
-export default function input({ style, children }: inputProps) {
-  const base =
-    "border border-black rounded-md text-sm text-neutral-400 p-1 outline-none";
-  const mergeClass = twMerge(
-    base,
-    typeof style === "string" ? style : undefined
-  );
+type InputProps = Omit<React.ComponentPropsWithRef<"input">, "type"> & {
+  type: "text" | "password" | "email" | "number" | "date";
+};
 
+export default function Input(props: InputProps) {
+  const base =
+    "inter w-60 h-11 bg-white border border-[#4f4f4f] rounded-lg text-sm text-neutral-400 px-4 outline-none";
+
+  // const mergeClass = twMerge(
+  //   base,
+  //   typeof style === "string" ? style : undefined
+  // );
+
+  // console.log(props);
+  const { ...rest } = props;
+
+  console.log(rest);
   return (
-    <>
-      <input className={mergeClass} placeholder={children} />
-    </>
+    <input
+      className={base}
+      placeholder={
+        typeof props.children === "string" ? props.children : undefined
+      }
+      {...rest}
+    />
   );
 }
