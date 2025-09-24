@@ -1,0 +1,22 @@
+{
+  "name": "fe7-learn",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bench": "vitest bench --run"
+  },
+  "devDependencies": {
+    "eslint": "^9.32.0",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.9.0",
+    "react-redux": "^9.2.0",
+    "zustand": "^5.0.8"
+  }
+}

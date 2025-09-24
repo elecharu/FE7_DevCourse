@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>문제 5</title>
+  </head>
+  <body>
+    <img id="image" src="image1.jpg" alt="이미지" />
+    <button id="changeImageButton">이미지 변경</button>
+
+    <script>
+      const btnEl = document.querySelector("#changeImageButton");
+      btnEl.addEventListener("click", function (el) {
+        const imageTag = document.getElementById("image");
+        imageTag.setAttribute("src", "none");
+      });
+    </script>
+  </body>
+</html>

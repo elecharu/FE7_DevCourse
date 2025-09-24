@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+.grayButton {
+  border-radius: 8px;
+  background-color: #4f4f4f;
+  color: white;
+  font-size: large;
+  font-weight: 500;
+  padding: 8px 16px;
+  border: none;
+  width: 96px;
+  height: 48px;
+}
+
+.redButton {
+  border-radius: 8px;
+  background-color: #ec4849;
+  color: white;
+  font-size: large;
+  font-weight: 500;
+  padding: 8px 16px;
+  border: none;
+  width: 96px;
+  height: 48px;
+}
+
+.purpleButton {
+  border-radius: 8px;
+  background-color: #7b49f0;
+  color: white;
+  font-size: large;
+  font-weight: 500;
+  padding: 8px 16px;
+  border: none;
+  width: 96px;
+  height: 48px;
+}
