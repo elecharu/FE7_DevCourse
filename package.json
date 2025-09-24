@@ -13,5 +13,9 @@
   "devDependencies": {
     "eslint": "^9.32.0",
     "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.9.0",
+    "react-redux": "^9.2.0"
   }
 }
