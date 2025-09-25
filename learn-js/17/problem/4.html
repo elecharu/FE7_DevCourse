@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>문제 4</title>
+  </head>
+  <body>
+    <ul id="itemList">
+      <li>항목 1</li>
+      <li>항목 2</li>
+      <li>항목 3</li>
+    </ul>
+
+    <script>
+      const el = document.querySelectorAll("li");
+      el.forEach((els) => {
+        els.addEventListener("click", function (target) {
+          els.remove();
+        });
+      });
+    </script>
+  </body>
+</html>

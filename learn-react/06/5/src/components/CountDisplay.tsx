@@ -1,0 +1,13 @@
+import React from "react";
+
+interface CountDisplayProps {
+  count: number;
+}
+
+export default function CountDisplay({ count }: CountDisplayProps) {
+  return (
+    <>
+      <h1>Count : {count}</h1>
+    </>
+  );
+}

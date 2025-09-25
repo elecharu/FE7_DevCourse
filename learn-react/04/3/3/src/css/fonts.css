@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "JejuDoldam"; /* 사용할 폰트의 이름을 정의 */
+  src:
+    url("../assets/fonts/doldam2.woff"), url("../assets/fonts/doldam.woff"); /* 폰트 파일의 위치 */
+}
+
+.doldam {
+  font-family: "JejuDoldam";
+}

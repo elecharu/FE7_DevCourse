@@ -1,6 +1,8 @@
-# FE7_DevCourse  
-PR을 제출할 때는     
-[FE7_sungsoo] 2025MMDD_01_과제제출  
+# FE7_DevCourse
 
-형식으로 진행
-    
+PR을 제출할 때는
+
+[FE7_sungsoo] 2025MMDD_01_코드제출  
+[FE7_sungsoo] 2025MMDD_01_과제제출
+
+식으로 제목을 작성합니다.

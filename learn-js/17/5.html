@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>이벤트 버블링 & 캡처링 예제</title>
+	<style>
+
+	</style>
+</head>
+<body>
+	<ul>
+        <li>첫 번째 항목</li>
+        <li>두 번째 항목</li>
+    </ul>
+    <button>
+        추가
+    </button>
+
+	<script>
+		// const liEls = document.querySelectorAll('li');
+        
+        // liEls.forEach((el) => {
+        //     el.addEventListener('click', function() {
+        //         if(this.style.textDecoration === 'line-through')
+        //             this.style.textDecoration=''
+        //         else this.style.textDecoration = 'line-through';
+        //     })
+        // })
+
+        const ulEls = document.querySelector('ul');
+        
+        ulEls.addEventListener('click', function (event) {
+            console.log("CLICK")
+            console.log(event.target)
+            if(event.target.tagName === "LI"){
+                if(event.target.style.textDecoration === 'line-through')
+                    event.target.style.textDecoration='none'
+                else event.target.style.textDecoration = 'line-through';
+            }
+        })
+
+        const buttonEl = document.querySelector('button')
+        buttonEl.addEventListener('click', function () {
+            const liEl = document.createElement('li');
+            liEl.innerText = '새로운 항목'
+
+            const ulEl = document.querySelector('ul');
+            ulEl.appendChild(liEl)
+        })
+	</script>
+</body><!--  -->
+</html>
